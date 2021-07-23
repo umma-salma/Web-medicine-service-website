@@ -1,0 +1,382 @@
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #323232;
+  --primary-color: #46b3e6;
+  --secondary-color: #0f3057;
+  --transition: all 0.2s linear;
+}
+
+
+/*hotline and button*/
+.top-container {
+  position: relative;
+  height: 50px;
+  background-color: var(--secondary-color);
+}
+
+.hotline {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  margin: auto;
+  display: inline;
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.2rem;
+  /*padding: 10px 10px;*/
+}
+
+.search-container {
+  display: inline;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.searchbox {
+  position: relative;
+  min-width: 50px;
+  width: 0%;
+  height: 50px;
+  float: right;
+  overflow: hidden;
+
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  -ms-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.searchbox-input {
+  top: 0;
+  right: 0;
+  border: 0;
+  outline: 0;
+  background: #dcddd8;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0px 55px 0px 20px;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+.searchbox-input::-webkit-input-placeholder {
+  color: var(--secondary-color);
+}
+
+.searchbox-input:-moz-placeholder {
+  color: var(--secondary-color);
+}
+
+.searchbox-input::-moz-placeholder {
+  color: var(--secondary-color);
+}
+
+.searchbox-input:-ms-input-placeholder {
+  color: var(--secondary-color);
+}
+
+.searchbox-icon,
+.searchbox-submit {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  color: #FFFFFF;
+  background: var(--secondary-color);
+}
+
+.searchbox-open {
+  width: 30%;
+}
+
+/*Logo*/
+.logo-name {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--secondary-color);
+  font-size: 2.1rem;
+  text-shadow: 1px 3px var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+  display: inline;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+.logo-name:hover{
+  text-decoration: none;
+}
+
+/* navigation bar*/
+.navigation-container {
+  width: 100%;
+  margin: 0 auto;
+  height: 100px;
+  position: relative;
+  display: fixed;
+}
+
+nav {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  float: right;
+}
+
+nav ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 10px 12px;
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-decoration: none;
+}
+.navs{
+  color: var(--secondary-color);
+}
+
+/* Hide dropdown by default*/
+nav ul ul {
+  background-color: var(--secondary-color);
+  display: none;
+  position: absolute;
+  top: 50px;
+}
+
+/* display dropdown on hover*/
+nav ul li:hover > ul {
+  display: inline;
+  z-index: 99;
+  padding: 0;
+}
+
+/*First tier dropdown*/
+nav ul ul li {
+  width: 400px;
+  height: 200px;
+  float: none;
+  display: inline;
+  z-index: 99;
+}
+
+nav ul ul li a {
+  color: #fff;
+
+}
+
+nav ul ul li a:hover {
+  background-color: #fff;
+  color: var(--secondary-color);
+}
+
+
+
+li > a:only-child:after {
+  content: '';
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: #fff;
+  z-index: 99;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* end of navbar*/
+/* Footer */
+.footer {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 110px;
+  background-color: var(--secondary-color);
+  display: flex;
+}
+.web-icon {
+  margin: 20px 60px 0 140px;
+}
+
+.web-icon h3 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-top: 28px;
+  margin-bottom: 5px;
+}
+
+.web-icon p {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+
+.newsletter {
+  margin: 35px 60px 0 30px;
+}
+
+.newsletter h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.newsletter hr {
+  margin-left: 0;
+  margin-bottom: 8px;
+  border-top: 0.1px solid #fff;
+}
+
+.newsletter p {
+  color: #fff;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+.newsletter-form input[type=email] {
+  width: 100%;
+  padding: 5px 5px;
+  color: var(--primary-color);
+  margin: 0;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.newsletter-form input[type=submit] {
+  width: 30%;
+  background-color: #ccc;
+  color: var(--secondary-color);
+  padding: 5px 2px;
+  margin: 0 0 100px 0;
+  border-style: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-navigation {
+  margin: 35px 60px 0 30px;
+}
+
+.footer-navigation h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.footer-navigation hr {
+  width: 40%;
+  margin-left: 0;
+  border-top: 0.1px solid #fff;
+  margin-bottom: 10px;
+}
+
+.footer-navigation-all a {
+  color: #fff;
+  font-weight: 300;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  margin: 35px 30px 0 50px;
+}
+
+.social-icon h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.social-icon hr {
+  width: 40%;
+  margin-left: 0;
+  border-top: 0.1px solid #fff;
+  margin-bottom: 10px;
+}
+
+.social-icon img {
+  margin-top: 10px;
+}
+
+.social-icon a {
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+/*  appointment */
+
+input[type=text],
+input[type=email],
+input[type=date],
+ select {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 15px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=date]:focus,
+select:focus {
+            background-color: #f6f5f5;
+            outline: none;
+        }
+
